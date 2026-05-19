@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MOCKUP — Instant Online Roof Estimate | 5280 Pro Exteriors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --navy:#0e1f38;
+  --navy2:#152d50;
+  --gold:#c8952a;
+  --gold2:#e8ad3a;
+  --white:#ffffff;
+  --off:#f5f4f0;
+  --light:#eceae3;
+  --mid:#6b6a65;
+  --text:#1c1b18;
+  --red:#b83025;
+  --red2:#d4392c;
+  --max:1080px;
+  --r:5px;
+}
+
+body{font-family:'Open Sans',sans-serif;font-size:16px;line-height:1.7;color:var(--text);background:#fff}
+h1,h2,h3,h4{font-family:'Oswald',sans-serif;line-height:1.15;color:var(--navy)}
+h1{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:700}
+h2{font-size:clamp(1.5rem,2.8vw,2rem);font-weight:600;margin-bottom:.6rem}
+h3{font-size:clamp(1rem,1.8vw,1.25rem);font-weight:600;margin-bottom:.35rem}
+p{margin-bottom:.9rem}
+p:last-child{margin-bottom:0}
+ul{padding-left:1.3rem;margin-bottom:.9rem}
+li{margin-bottom:.3rem}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.25rem}
+section{padding:3.5rem 0}
+
+/* ── MOCKUP BANNER ── */
+.mockup-banner{
+  background:#1a1a1a;
+  color:#fff;
+  text-align:center;
+  padding:.6rem 1rem;
+  font-family:'Oswald',sans-serif;
+  font-size:.8rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  border-bottom:3px solid var(--gold);
+}
+.mockup-banner span{color:var(--gold2)}
+
+/* ── NAV ── */
+.nav{
+  background:var(--navy);
+  padding:.75rem 0;
+  border-bottom:2px solid var(--gold);
+}
+.nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 1.25rem;
+}
+.nav-logo{
+  font-family:'Oswald',sans-serif;
+  font-size:1.3rem;
+  font-weight:700;
+  color:var(--white);
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.nav-logo span{color:var(--gold2)}
+.nav-links{display:flex;gap:1.5rem}
+.nav-links a{
+  color:rgba(255,255,255,.75);
+  text-decoration:none;
+  font-size:.85rem;
+  font-family:'Oswald',sans-serif;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  transition:color .15s;
+}
+.nav-links a:hover{color:var(--gold2)}
+.nav-cta{
+  background:var(--red);
+  color:#fff;
+  padding:.4rem 1rem;
+  border-radius:var(--r);
+  font-family:'Oswald',sans-serif;
+  font-size:.85rem;
+  font-weight:600;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+
+/* ── HERO ── */
+.hero{
+  background:var(--navy);
+  position:relative;
+  overflow:hidden;
+  padding:4rem 0 3.5rem;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:linear-gradient(to right, rgba(14,31,56,.95) 45%, rgba(14,31,56,.55));
+  z-index:1;
+}
+.hero-img{
+  position:absolute;inset:0;
+  background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600"><rect fill="%23253a5a" width="1200" height="600"/><rect fill="%231a2d48" x="0" y="300" width="1200" height="300"/><ellipse fill="%230a1c34" cx="600" cy="340" rx="700" ry="200"/><rect fill="%23344f72" x="100" y="200" width="300" height="200" rx="4"/><rect fill="%23253a5a" x="180" y="180" width="140" height="30" rx="2"/><rect fill="%23344f72" x="500" y="220" width="200" height="180" rx="4"/><rect fill="%23253a5a" x="560" y="200" width="80" height="25" rx="2"/><rect fill="%23344f72" x="780" y="240" width="250" height="160" rx="4"/></svg>') center/cover no-repeat;
+  z-index:0;
+}
+.hero .wrap{position:relative;z-index:2}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:3rem;
+  align-items:start;
+}
+@media(max-width:780px){.hero-grid{grid-template-columns:1fr}}
+
+.hero-badge{
+  display:inline-block;
+  background:rgba(200,149,42,.15);
+  border:1px solid rgba(200,149,42,.45);
+  color:var(--gold2);
+  font-family:'Oswald',sans-serif;
+  font-size:.78rem;
+  font-weight:500;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  padding:3px 10px;
+  border-radius:3px;
+  margin-bottom:.9rem;
+}
+.hero h1{color:#fff;margin-bottom:1rem}
+.hero-sub{
+  color:rgba(255,255,255,.78);
+  font-size:1rem;
+  margin-bottom:1.5rem;
+}
+.hero-tagline{
+  font-family:'Oswald',sans-serif;
+  font-size:1.05rem;
+  font-weight:600;
+  color:var(--gold2);
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  margin-bottom:.4rem;
+}
+.hero-tagline2{
+  color:rgba(255,255,255,.65);
+  font-size:.9rem;
+}
+
+/* ── FORM CARD ── */
+.form-card{
+  background:#fff;
+  border-radius:var(--r);
+  padding:1.75rem 1.5rem;
+  box-shadow:0 8px 40px rgba(0,0,0,.35);
+}
+.form-card-title{
+  font-family:'Oswald',sans-serif;
+  font-size:1.1rem;
+  font-weight:700;
+  color:var(--navy);
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  margin-bottom:1.1rem;
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+}
+.form-card-title::before{
+  content:'';
+  display:inline-block;
+  width:4px;height:20px;
+  background:var(--red);
+  border-radius:2px;
+}
+.form-note{
+  font-size:.78rem;
+  color:var(--mid);
+  margin-bottom:.85rem;
+  padding:.5rem .75rem;
+  background:var(--off);
+  border-left:3px solid var(--gold);
+  border-radius:0 3px 3px 0;
+  font-style:italic;
+}
+.fake-form-row{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin-bottom:.65rem}
+.fake-input{
+  height:38px;
+  border:1px solid #d0cfc9;
+  border-radius:4px;
+  background:#fafaf8;
+  padding:0 .75rem;
+  display:flex;
+  align-items:center;
+  font-size:.8rem;
+  color:#aaa;
+}
+.fake-input.full{grid-column:1/-1}
+.fake-select{
+  height:38px;
+  border:1px solid #d0cfc9;
+  border-radius:4px;
+  background:#fafaf8;
+  padding:0 .75rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-size:.8rem;
+  color:#aaa;
+  margin-bottom:.65rem;
+}
+.fake-select::after{content:'▾';color:#aaa;font-size:.7rem}
+.fake-btn{
+  width:100%;
+  background:var(--red);
+  color:#fff;
+  border:none;
+  border-radius:4px;
+  height:44px;
+  font-family:'Oswald',sans-serif;
+  font-size:1rem;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  cursor:pointer;
+  margin-top:.5rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:.5rem;
+}
+.snippet-box{
+  margin-top:.85rem;
+  background:#f0f4f8;
+  border:1.5px dashed #7aadda;
+  border-radius:4px;
+  padding:.75rem 1rem;
+  text-align:center;
+}
+.snippet-box p{
+  font-size:.75rem;
+  color:#185fa5;
+  margin:0;
+  font-family:monospace;
+}
+.snippet-label{
+  font-size:.7rem;
+  color:#888;
+  margin-bottom:.25rem !important;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+/* ── TRUST BAR ── */
+.trust-bar{
+  background:var(--navy2);
+  padding:1rem 0;
+  border-top:3px solid var(--gold);
+}
+.trust-inner{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:2rem;
+  flex-wrap:wrap;
+}
+.trust-badge{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:.2rem;
+}
+.trust-badge-icon{
+  width:52px;height:52px;
+  border-radius:50%;
+  background:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--navy);
+  font-size:1.3rem;
+}
+.trust-badge-label{
+  font-family:'Oswald',sans-serif;
+  font-size:.7rem;
+  font-weight:600;
+  color:rgba(255,255,255,.85);
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  text-align:center;
+  line-height:1.2;
+}
+
+/* ── SECTION LABELS ── */
+.section-eyebrow{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  margin-bottom:.6rem;
+}
+.eyebrow-line{width:36px;height:3px;background:var(--red);border-radius:2px}
+.eyebrow-text{
+  font-family:'Oswald',sans-serif;
+  font-size:.75rem;
+  font-weight:600;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--red);
+}
+
+/* ── INTRO ── */
+.intro-sec{background:#fff;border-bottom:1px solid var(--light)}
+.intro-sec .wrap{max-width:760px}
+
+/* ── STEPS ── */
+.steps-sec{background:var(--off)}
+.steps-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1.5rem;
+  margin-top:1.75rem;
+}
+@media(max-width:580px){.steps-grid{grid-template-columns:1fr}}
+.step-card{
+  background:#fff;
+  border:1px solid var(--light);
+  border-radius:var(--r);
+  padding:1.5rem;
+  position:relative;
+}
+.step-num{
+  font-family:'Oswald',sans-serif;
+  font-size:3.5rem;
+  font-weight:700;
+  color:var(--light);
+  line-height:1;
+  margin-bottom:.5rem;
+}
+.step-tag{
+  display:inline-block;
+  background:var(--navy);
+  color:#fff;
+  font-family:'Oswald',sans-serif;
+  font-size:.7rem;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  padding:2px 8px;
+  border-radius:3px;
+  margin-bottom:.6rem;
+}
+
+/* ── WHY ── */
+.why-sec{background:#fff}
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:1.25rem;
+  margin-top:1.75rem;
+}
+.why-card{
+  border-left:4px solid var(--navy);
+  background:var(--off);
+  border-radius:0 var(--r) var(--r) 0;
+  padding:1.1rem 1.1rem;
+}
+.why-card h3{font-size:1rem;color:var(--navy)}
+.why-card p{font-size:.9rem;color:var(--mid);margin-bottom:0}
+
+/* ── FACTORS ── */
+.factors-sec{background:var(--navy);color:#fff}
+.factors-sec h2,.factors-sec h3{color:#fff}
+.factors-sec p{color:rgba(255,255,255,.75)}
+.factors-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:1rem;
+  margin-top:1.75rem;
+}
+.factor-card{
+  border:1px solid rgba(255,255,255,.12);
+  border-top:3px solid var(--gold);
+  border-radius:var(--r);
+  padding:1.1rem;
+  background:rgba(255,255,255,.05);
+}
+.factor-card h3{color:var(--gold2);font-size:1rem;margin-bottom:.3rem}
+.factor-card p{font-size:.88rem;margin-bottom:0}
+
+/* ── COMPARE ── */
+.compare-sec{background:var(--off)}
+.compare-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1.25rem;
+  margin-top:1.75rem;
+}
+@media(max-width:580px){.compare-grid{grid-template-columns:1fr}}
+.compare-card{
+  background:#fff;
+  border:1px solid var(--light);
+  border-radius:var(--r);
+  padding:1.5rem;
+}
+.compare-card.accent{border-top:4px solid var(--red)}
+.compare-card h3{margin-bottom:.75rem;font-size:1.1rem}
+.compare-card ul{font-size:.9rem}
+
+/* ── CHECKLIST ── */
+.when-sec{background:#fff}
+.when-sec .wrap{max-width:760px}
+.checklist{list-style:none;padding:0;margin-top:1.1rem}
+.checklist li{
+  display:flex;align-items:flex-start;gap:.6rem;
+  padding:.5rem 0;
+  border-bottom:1px solid var(--light);
+  font-size:.95rem;
+}
+.checklist li:last-child{border-bottom:none}
+.chk{
+  flex-shrink:0;width:20px;height:20px;
+  background:var(--navy);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin-top:3px;
+}
+.chk svg{width:10px;height:10px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* ── CONFIDENCE CTA ── */
+.confidence-sec{
+  background:var(--navy2);
+  color:#fff;
+  text-align:center;
+}
+.confidence-sec h2{color:#fff;margin-bottom:.75rem}
+.confidence-sec p{color:rgba(255,255,255,.75);max-width:600px;margin:0 auto 1.5rem}
+
+.btn-primary{
+  display:inline-block;
+  background:var(--red);
+  color:#fff;
+  font-family:'Oswald',sans-serif;
+  font-size:1rem;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  padding:.75rem 2rem;
+  border-radius:var(--r);
+  text-decoration:none;
+  border:none;cursor:pointer;
+}
+.btn-outline{
+  display:inline-block;
+  background:transparent;
+  color:#fff;
+  font-family:'Oswald',sans-serif;
+  font-size:1rem;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  padding:.7rem 2rem;
+  border-radius:var(--r);
+  text-decoration:none;
+  border:2px solid rgba(255,255,255,.4);
+  margin-left:.75rem;
+}
+
+/* ── FAQ ── */
+.faq-sec{background:var(--off)}
+.faq-sec .wrap{max-width:760px}
+.faq-list{margin-top:1.5rem}
+details{border-bottom:1px solid var(--light);background:#fff;border-radius:var(--r);margin-bottom:.5rem;overflow:hidden}
+summary{
+  font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;
+  color:var(--navy);cursor:pointer;
+  padding:1rem 1.25rem;
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  list-style:none;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';font-size:1.3rem;color:var(--red);flex-shrink:0;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details[open] summary{border-bottom:1px solid var(--light)}
+.faq-body{padding:1rem 1.25rem;color:var(--mid);font-size:.93rem}
+
+/* ── BOTTOM CTA ── */
+.bottom-cta-sec{background:var(--red);text-align:center;padding:3rem 0}
+.bottom-cta-sec h2{color:#fff;font-size:clamp(1.6rem,3vw,2.4rem)}
+.bottom-cta-sec p{color:rgba(255,255,255,.85);margin-bottom:1.5rem}
+.btn-white{
+  display:inline-block;
+  background:#fff;
+  color:var(--red);
+  font-family:'Oswald',sans-serif;
+  font-size:1rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  padding:.75rem 2rem;
+  border-radius:var(--r);
+  text-decoration:none;
+}
+
+/* ── FOOTER ── */
+.footer{background:var(--navy);color:rgba(255,255,255,.55);font-size:.82rem;padding:1.5rem 0;text-align:center}
+.footer a{color:var(--gold2);text-decoration:none}
+
+/* ── ANNOTATION SYSTEM ── */
+.ann{
+  display:inline-block;
+  background:var(--gold);
+  color:var(--navy);
+  font-family:'Oswald',sans-serif;
+  font-size:.65rem;
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  padding:1px 6px;
+  border-radius:3px;
+  vertical-align:middle;
+  margin-left:.4rem;
+  cursor:default;
+}
+.dev-note{
+  background:#fffbe6;
+  border:1px dashed #c8952a;
+  border-left:4px solid #c8952a;
+  border-radius:4px;
+  padding:.6rem .9rem;
+  margin:.75rem 0;
+  font-size:.8rem;
+  color:#5a4a1a;
+}
+.dev-note strong{font-weight:600}
+</style>
+</head>
+<body>
+
+<!-- MOCKUP IDENTIFIER -->
+<div class="mockup-banner">
+  ⚠ This is a <span>design mockup</span> for team reference — not the live page &nbsp;|&nbsp; Page: <span>/instant-online-estimate</span>
+</div>
+
+<!-- NAV (existing site nav, replicate as-is) -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">5280 <span>Pro</span> Exteriors</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">Projects</a>
+      <a href="#">Find Your Roof</a>
+      <a href="#" class="nav-cta">Free Estimate</a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ══════════════════════════════════════
+     SECTION 1 — HERO
+     Squarespace: Banner section, dark overlay
+══════════════════════════════════════ -->
+<header class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+
+      <!-- LEFT: SEO Headline -->
+      <div>
+        <div class="hero-badge">Free · Instant · No Appointment</div>
+
+        <!-- H1 — EXACT TEXT REQUIRED FOR SEO -->
+        <h1>Instant Online Roof Estimate <span class="ann">H1</span></h1>
+
+        <p class="hero-sub">
+          Homeowners often want to understand the cost of a new roof before scheduling
+          an inspection or meeting with a contractor. Our instant online roof estimate
+          tool gives you a quick starting price for your roofing project based on your
+          home, roof size, and roofing materials.
+        </p>
+        <p class="hero-tagline">No pressure. No shortcuts. Just real numbers.</p>
+        <p class="hero-tagline2">
+          Get a starting point for roof replacement without waiting for phone calls
+          or in-person appointments.
+        </p>
+      </div>
+
+      <!-- RIGHT: QuickQuote Embed -->
+      <div>
+        <div class="form-card">
+          <div class="form-card-title">Start Your Free Estimate</div>
+
+          <div class="dev-note">
+            <strong>Dev note:</strong> Add a Squarespace Code Block here and paste:<br>
+            <code style="font-size:.8rem;color:#185fa5">&lt;script src="https://qq.leadsbyquickquote.com/roofs/integration"&gt;&lt;/script&gt;</code>
+          </div>
+
+          <!-- Placeholder showing what the QuickQuote form looks like -->
+          <div class="fake-form-row">
+            <div class="fake-input">First Name (required)</div>
+            <div class="fake-input">Last Name (required)</div>
+          </div>
+          <div class="fake-form-row">
+            <div class="fake-input full">Phone (required)</div>
+          </div>
+          <div class="fake-form-row">
+            <div class="fake-input full">Email (required)</div>
+          </div>
+          <div class="fake-form-row">
+            <div class="fake-input full">Street Address</div>
+          </div>
+          <div class="fake-form-row">
+            <div class="fake-input">City (required)</div>
+            <div class="fake-input">State</div>
+          </div>
+          <div class="fake-select">Service Requested (required)</div>
+          <div class="fake-select">Project Type (required)</div>
+          <div class="fake-btn">
+            ↗ Get My Free Roof Estimate
+          </div>
+
+          <div class="snippet-box">
+            <p class="snippet-label">QuickQuote snippet replaces the form above</p>
+            <p>&lt;script src="https://qq.leadsbyquickquote.com/roofs/integration"&gt;&lt;/script&gt;</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+<!-- TRUST BADGES (keep existing badges from current page) -->
+<div class="trust-bar">
+  <div class="trust-inner wrap">
+    <div class="trust-badge">
+      <div class="trust-badge-icon">✓</div>
+      <div class="trust-badge-label">Licensed<br>Bonded &amp; Insured</div>
+    </div>
+    <div class="trust-badge">
+      <div class="trust-badge-icon">10+</div>
+      <div class="trust-badge-label">Years Insurance<br>Claims Expertise</div>
+    </div>
+    <div class="trust-badge">
+      <div class="trust-badge-icon">CO</div>
+      <div class="trust-badge-label">Colorado<br>Owned &amp; Local</div>
+    </div>
+    <div class="trust-badge">
+      <div class="trust-badge-icon">$</div>
+      <div class="trust-badge-label">Financing<br>Options Available</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     SECTION 2 — Get a Roofing Price Estimate in Seconds
+     Squarespace: Text section
+══════════════════════════════════════ -->
+<section class="intro-sec">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <div class="eyebrow-line"></div>
+      <div class="eyebrow-text">How It Works</div>
+    </div>
+    <h2>Get a Roofing Price Estimate in Seconds <span class="ann">H2</span></h2>
+    <p>
+      Replacing a roof is one of the largest investments homeowners make in their property.
+      Many homeowners want a rough price range before committing to inspections, appointments,
+      or meetings with contractors. Our instant roof estimate tool makes the process easier.
+    </p>
+    <p>
+      Instead of waiting days for a roofing quote, you can enter your name, address, and
+      contact info, and within seconds the system generates a roofing estimate based on
+      roof size and material type. This gives you a clear starting point to decide whether
+      it is the right time to move forward with your roofing project.
+    </p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     SECTION 3 — How Our Tool Works
+     Squarespace: 2-column layout
+══════════════════════════════════════ -->
+<section class="steps-sec">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <div class="eyebrow-line"></div>
+      <div class="eyebrow-text">The Process</div>
+    </div>
+    <h2>How Our Instant Roof Estimate Tool Works <span class="ann">H2</span></h2>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-tag">Step 1</div>
+        <h3>Enter Your Name, Email, Address &amp; Phone Number <span class="ann">H3</span></h3>
+        <p>
+          The system uses EagleView technology and aerial measurements to estimate your
+          roof size and roof complexity — no ladder or in-person visit required.
+        </p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-tag">Step 2</div>
+        <h3>Receive Your Instant Roof Estimate <span class="ann">H3</span></h3>
+        <p>
+          Once submitted, the system generates an estimated roofing price range based on
+          roof size, slope, and material choice. This estimate gives you a quick
+          understanding of what a roofing project may cost before scheduling a full inspection.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     SECTION 4 — Why Homeowners Use Online Estimates
+     Squarespace: 4-column card layout
+══════════════════════════════════════ -->
+<section class="why-sec">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <div class="eyebrow-line"></div>
+      <div class="eyebrow-text">Benefits</div>
+    </div>
+    <h2>Why Homeowners Use Online Roofing Estimates <span class="ann">H2</span></h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>Faster Pricing Information <span class="ann">H3</span></h3>
+        <p>Traditional quotes require scheduling and wait times. An instant estimate gets you pricing guidance right now.</p>
+      </div>
+      <div class="why-card">
+        <h3>Convenience <span class="ann">H3</span></h3>
+        <p>Complete the estimate anytime from your phone, tablet, or computer — no appointment needed.</p>
+      </div>
+      <div class="why-card">
+        <h3>Better Planning <span class="ann">H3</span></h3>
+        <p>Understand roofing costs before making decisions about financing, insurance claims, or home improvements.</p>
+      </div>
+      <div class="why-card">
+        <h3>A Starting Point for Your Project <span class="ann">H3</span></h3>
+        <p>While a final quote needs an inspection, an instant estimate helps you know what to expect.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     SECTION 5 — What Impacts Cost
+     Squarespace: Dark background section
+══════════════════════════════════════ -->
+<section class="factors-sec">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <div class="eyebrow-line" style="background:var(--gold)"></div>
+      <div class="eyebrow-text" style="color:var(--gold2)">Pricing Factors</div>
+    </div>
+    <h2>What Impacts the Cost of a Roof Replacement <span class="ann">H2</span></h2>
+    <p>Roofing costs vary depending on several important factors.</p>
+    <div class="factors-grid">
+      <div class="factor-card">
+        <h3>Roof Size <span class="ann">H3</span></h3>
+        <p>Larger roofs require more materials and labor, directly affecting project cost.</p>
+      </div>
+      <div class="factor-card">
+        <h3>Roof Pitch &amp; Complexity <span class="ann">H3</span></h3>
+        <p>Steeper roofs or those with valleys, dormers, and architectural features require more time and specialized methods.</p>
+      </div>
+      <div class="factor-card">
+        <h3>Roofing Material <span class="ann">H3</span></h3>
+        <p>Different systems have different price ranges depending on durability, lifespan, and installation requirements.</p>
+      </div>
+      <div class="factor-card">
+        <h3>Existing Roof Layers <span class="ann">H3</span></h3>
+        <p>Multiple existing layers may require additional tear-off work before new materials can be installed.</p>
+      </div>
+      <div class="factor-card">
+        <h3>Roof Deck Condition <span class="ann">H3</span></h3>
+        <p>Damaged decking may need repair or replacement before new roofing materials are applied.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     SECTION 6 — Online Estimate vs. Final Quote
+     Squarespace: 2-column comparison
+══════════════════════════════════════ -->
+<section class="compare-sec">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <div class="eyebrow-line"></div>
+      <div class="eyebrow-text">Know the Difference</div>
+    </div>
+    <h2>Online Estimates vs. Final Roofing Quotes <span class="ann">H2</span></h2>
+    <p>An instant online estimate provides a helpful starting point — but it is not a final quote.</p>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <h3>Online Estimate</h3>
+        <ul>
+          <li>Instant price range in seconds</li>
+          <li>Based on aerial EagleView measurements</li>
+          <li>No appointment needed</li>
+          <li>Helps with budgeting &amp; planning</li>
+          <li>Free, no commitment required</li>
+        </ul>
+      </div>
+      <div class="compare-card accent">
+        <h3>Final Roofing Quote</h3>
+        <p style="font-size:.85rem;color:var(--mid);margin-bottom:.6rem">Requires professional inspection. Final price depends on:</p>
+        <ul>
+          <li>Exact roof measurements</li>
+          <li>Roof decking condition</li>
+          <li>Ventilation improvements</li>
+          <li>Flashing replacement</li>
+          <li>Underlayment requirements</li>
+          <li>Storm damage repairs</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:1.1rem;color:var(--mid);font-size:.93rem">
+      After reviewing your estimate, the next step is a professional roof inspection to
+      confirm the final scope of work.
+    </p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     SECTION 7 — When It's Most Helpful
+     Squarespace: Text + checklist section
+══════════════════════════════════════ -->
+<section class="when-sec">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <div class="eyebrow-line"></div>
+      <div class="eyebrow-text">Is This Right for You?</div>
+    </div>
+    <h2>When an Instant Roof Estimate Is Most Helpful <span class="ann">H2</span></h2>
+    <p>This tool is especially helpful for homeowners who:</p>
+    <ul class="checklist">
+      <li><span class="chk"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Want a quick idea of roof replacement cost</li>
+      <li><span class="chk"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Are planning a roofing project in the near future</li>
+      <li><span class="chk"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Want to compare roofing material options</li>
+      <li><span class="chk"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Are budgeting for a home improvement project</li>
+      <li><span class="chk"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Want to move faster in the decision process</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     SECTION 8 — Confidence CTA
+     Squarespace: Dark CTA section
+══════════════════════════════════════ -->
+<section class="confidence-sec">
+  <div class="wrap">
+    <h2>Plan Your Roofing Project with Confidence <span class="ann">H2</span></h2>
+    <p>
+      Roof replacements are major projects, and homeowners deserve transparency before the
+      process begins. Our instant roof estimate tool gives you a simple way to explore
+      pricing and understand the potential investment required to replace your roof.
+    </p>
+    <a href="#" class="btn-primary">Start Your Instant Roof Estimate Now</a>
+    <a href="#" class="btn-outline">Call Us Instead</a>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     SECTION 9 — FAQ
+     Squarespace: Accordion block
+══════════════════════════════════════ -->
+<section class="faq-sec">
+  <div class="wrap">
+    <div class="section-eyebrow">
+      <div class="eyebrow-line"></div>
+      <div class="eyebrow-text">Common Questions</div>
+    </div>
+    <h2>Roof Estimate Frequently Asked Questions <span class="ann">H2</span></h2>
+    <div class="faq-list">
+      <details>
+        <summary>How accurate is an online roof estimate? <span class="ann">H3</span></summary>
+        <div class="faq-body">Online estimates provide a pricing range based on roof size, materials, and installation costs. A final quote requires a professional inspection to confirm measurements and roof conditions.</div>
+      </details>
+      <details>
+        <summary>Do I have to schedule service after getting an estimate? <span class="ann">H3</span></summary>
+        <div class="faq-body">No. The estimate tool is designed to give homeowners helpful pricing information before deciding whether to move forward. There is no obligation.</div>
+      </details>
+      <details>
+        <summary>Is the instant roof estimate free? <span class="ann">H3</span></summary>
+        <div class="faq-body">Yes. The online estimate tool is free and helps homeowners understand roofing costs before scheduling an inspection.</div>
+      </details>
+      <details>
+        <summary>Can I use the estimate tool on my phone? <span class="ann">H3</span></summary>
+        <div class="faq-body">Yes. The tool is mobile-friendly and can be completed from smartphones, tablets, or desktop computers.</div>
+      </details>
+      <details>
+        <summary>Will the estimate include material options? <span class="ann">H3</span></summary>
+        <div class="faq-body">Yes. Our roofing estimate tools let you explore different roofing materials and see how pricing may vary based on the system you choose.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     SECTION 10 — Bottom CTA
+     Squarespace: Red banner section
+══════════════════════════════════════ -->
+<section class="bottom-cta-sec">
+  <div class="wrap">
+    <h2>Start Your Instant Roof Estimate <span class="ann">H2</span></h2>
+    <p>Getting started takes only a few seconds. Enter your property information and contact info to receive your instant roof estimate.</p>
+    <a href="#" class="btn-white">Start Your Instant Roof Estimate Now</a>
+  </div>
+</section>
+
+
+<!-- FOOTER (match existing) -->
+<footer class="footer">
+  <div class="wrap">
+    &copy; 2025 5280 Pro Exteriors &nbsp;·&nbsp; Denver, CO &nbsp;·&nbsp;
+    <a href="tel:+1-000-000-0000">Call Us Today</a>
+    &nbsp;·&nbsp;
+    <a href="#">5280 Doyle Logan Drive Ste D-20, Broomfield, CO 80021</a>
+  </div>
+</footer>
+
+</body>
+</html>
